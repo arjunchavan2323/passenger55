@@ -1,0 +1,22 @@
+<div class="col-sm-8">
+    <div class="card">
+        <div class="card-header">
+         
+        
+                <input type="text" class="from-control" [disabled]="!iseditable" [value]="product.fullname" #fullname>
+    
+            
+            <p>children: {{product.children?.length??0}}</p>
+           
+        </div>
+        <div class="card-body">
+            <p>check in date :{{(product.checkInDate|date)??'not check in'}}</p>
+        </div>
+        <div class="card-footer">
+            <button mat-button color="primary" *ngIf="!iseditable" (click)="iseditable=!iseditable">EDIT</button>
+    
+       <button mat-button color="warn" *ngIf="iseditable" (click)="onaddatom(fullname.value)">Done</button>
+       <button mat-button color="accent" (click)="onremove(product)">Remove</button>
+        </div>
+    </div>
+</div>

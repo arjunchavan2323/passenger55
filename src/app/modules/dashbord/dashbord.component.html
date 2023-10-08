@@ -1,0 +1,3 @@
+<app-card [totalcheck]="passengerArry.length" [totaliscount]="ischeckin"></app-card>
+<p *ngFor="let pass of passengerArry">{{pass.fullname}}</p>
+<app-detail (evenree)="onnndd($event)" [product]="pass" *ngFor="let pass of passengerArry"></app-detail>
